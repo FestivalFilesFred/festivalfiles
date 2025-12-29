@@ -10,7 +10,7 @@
             text-align: center;
             margin: 0;
             padding: 0;
-            overflow: hidden;
+            overflow: auto;
         }
         #gif-intro {
             position: fixed;
@@ -33,17 +33,19 @@
             font-size: 48px;
             font-weight: bold;
             text-shadow: 2px 2px 4px white;
-            animation: blink 2s infinite;
+            animation: blink 3s infinite;
             z-index: 101;
         }
         @keyframes blink {
             0% { opacity: 1; }
+            30% { opacity: 1; }
             50% { opacity: 0; }
+            80% { opacity: 0; }
             100% { opacity: 1; }
         }
         #gif-intro img {
-            max-width: 100%;
-            max-height: 100%;
+            max-width: 80%;
+            max-height: 80%;
             cursor: pointer;
             filter: brightness(1.1);
         }
@@ -53,24 +55,25 @@
         }
         .content {
             display: none;
-            padding-top: 20px;
-            padding-bottom: 50px;
+            padding-top: 10px 0;
         }
         h1 {
             color: #ff00ff;
             text-shadow: 2px 2px 0px #00ffff;
             font-size: 48px;
+            margin-bottom: 10px;
         }
         h2 {
             color: #9900ff;
             text-shadow: 1px 1px 0px #ffff00;
             font-size: 32px;
+            margin: 15px 0 5px 0;
         }
         .download-section {
-            margin: 20px auto;
+            margin: 10px auto;
             width: 80%;
             background-color: #ffff00;
-            padding: 20px;
+            padding: 10px 20px;
             border: 3px dotted #00ff00;
         }
         a {
@@ -79,11 +82,16 @@
         }
         .pony-gifs {
             margin: 20px auto;
-            width: 80%;
+            width: 90%;
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
-            padding-bottom: 30px;
+            padding: 20px 0;
+        }
+        .pony-gifs img {
+            width: 180px;
+            height: auto;
+            margin: 10px;
         }
     </style>
 </head>
