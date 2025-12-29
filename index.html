@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>FestivalFiles</title>
+    <title>Festival Files</title>
     <style>
         body {
             background-color: #ffccff;
@@ -24,19 +24,46 @@
             justify-content: center;
             align-items: center;
         }
+        #click-hint {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: red;
+            font-size: 48px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px white;
+            animation: blink 1s infinite;
+            z-index: 101;
+        }
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
         #gif-intro img {
             max-width: 100%;
             max-height: 100%;
             cursor: pointer;
+            filter: brightness(1.1);
+        }
+        #gif-intro img:hover {
+            filter: brightness(1.3);
+            border: 3px solid yellow;
         }
         .content {
             display: none;
-            padding-top: 50px;
+            padding-top: 20px;
         }
         h1 {
             color: #ff00ff;
             text-shadow: 2px 2px 0px #00ffff;
             font-size: 48px;
+        }
+        h2 {
+            color: #9900ff;
+            text-shadow: 1px 1px 0px #ffff00;
+            font-size: 32px;
         }
         .download-section {
             margin: 20px auto;
@@ -49,21 +76,37 @@
             color: #ff0000;
             font-weight: bold;
         }
+        .pony-gifs {
+            margin: 20px auto;
+            width: 80%;
+            display: flex;
+            justify-content: space-around;
+        }
     </style>
 </head>
 <body>
     <div id="gif-intro">
-        <img src="drivingtest.gif" alt="Intro-GIF" onclick="startWebsite()">
+        <img src="intro.gif" alt="Intro-GIF" onclick="startWebsite()">
+        <div id="click-hint">KLICK MICH!</div>
     </div>
     <div class="content" id="main-content">
-        <h1>FestivalFiles</h1>
-        <p>Klicke auf die Datei, um es herunterzuladen:</p>
+        <h1>Festival Files</h1>
+        <p>Spiel, Spaß und Spannung für dich und deine verdrufften Freunde:</p>
         <div class="download-section">
-            <p><a href="raetsel1.pdf" download>Rätsel 1: Das Geheimnis der pinken Pferde</a></p>
-            <p><a href="raetsel2.pdf" download>Rätsel 2: Der magische Hufeisen</a></p>
-            <p><a href="raetsel3.pdf" download>Rätsel 3: Das große Pferderennen</a></p>
+            <p><a href="raetsel1.pdf" download>Urkunde zum Verteilen - Bundesfusionspiele</a></p>
+            <p><a href="raetsel2.pdf" download>Kreuzworträtsel - Festival Edition</a></p>
+            <p><a href="raetsel3.pdf" download>Weihnachtsbingo - Wer von deinen Freunden hat das schlimmste Weihnachtsfest?</a></p>
         </div>
-        <img src="https://media.giphy.com/media/3o7TKSQ5rNQXuQjJ4E/giphy.gif" alt="Pferde-GIF" width="200">
+        <h2>Ketaschein</h2>
+        <div class="download-section">
+            <p>Du hast bestanden und willst nun andere durch die Prüfung schicken? Hier bekommst du Ketascheine!</p>
+            <p>Für fünf Taler je Schein plus Versandkosten schreibe eine Mail an <a href="mailto:drivingtest@mail.de">drivingtest@mail.de</a>.</p>
+        </div>
+        <div class="pony-gifs">
+            <img src="https://media.giphy.com/media/3o7TKSQ5rNQXuQjJ4E/giphy.gif" alt="Pony" width="150">
+            <img src="https://media.giphy.com/media/l0HlNaQ6gWfllcjDO/giphy.gif" alt="Pony" width="150">
+            <img src="https://media.giphy.com/media/13HBDT4QSTpveU/giphy.gif" alt="Pony" width="150">
+        </div>
     </div>
     <script>
         function startWebsite() {
