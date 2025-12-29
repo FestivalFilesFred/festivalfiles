@@ -26,14 +26,14 @@
         }
         #click-hint {
             position: absolute;
-            top: 60%;
+            top: 80%;
             left: 50%;
             transform: translate(-50%, -50%);
             color: red;
             font-size: 48px;
             font-weight: bold;
             text-shadow: 2px 2px 4px white;
-            animation: blink 1s infinite;
+            animation: blink 2s infinite;
             z-index: 101;
         }
         @keyframes blink {
@@ -54,6 +54,7 @@
         .content {
             display: none;
             padding-top: 20px;
+            padding-bottom: 50px;
         }
         h1 {
             color: #ff00ff;
@@ -81,13 +82,15 @@
             width: 80%;
             display: flex;
             justify-content: space-around;
+            flex-wrap: wrap;
+            padding-bottom: 30px;
         }
     </style>
 </head>
 <body>
     <div id="gif-intro">
         <img src="drivingtest.gif" alt="Intro-GIF" onclick="startWebsite()">
-        <div id="click-hint">KLICK MICH!</div>
+        <div id="click-hint">FOLLOW THE BROWN HORSE!</div>
     </div>
     <div class="content" id="main-content">
         <h1>Festival Files</h1>
